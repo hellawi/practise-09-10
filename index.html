@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Practice 09.10</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="logo-block">
+        <h1 class="logo">Bookshelf</h1>
+      </div>
+      
+      <nav aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="#books">Books</a></li>
+          <li><a href="#settings">Settings</a></li>
+          <li><a href="#notes">Notes</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      
+      <section class="page-actions" aria-label="Page actions">
+        <h2 id="books">Featured books</h2>
+        <div class="actions">
+          <button type="button" class="btn">Sort by title</button>
+          <button type="button" class="btn">Filter</button>
+          <button type="button" class="btn btn-primary">Add book</button>
+        </div>
+      </section>
+
+      
+      <section class="book-grid">
+        <article class="book-card">
+          <span class="badge">Fantasy</span>
+          <h3>The Glass Lighthouse</h3>
+          <p class="author">by Mira Calden</p>
+          <p>A keeper's daughter discovers the lighthouse lamp can show ships from the past.</p>
+        </article>
+
+        <article class="book-card">
+          <span class="badge">Mystery</span>
+          <h3>Seven Silent Clocks</h3>
+          <p class="author">by Theo Ravensworth</p>
+          <p>Every clock in the village stops at 3:14 — and one of them hides a letter.</p>
+        </article>
+
+        <article class="book-card">
+          <span class="badge">Sci-Fi</span>
+          <h3>Orbit of Small Things</h3>
+          <p class="author">by Lena Okoro</p>
+          <p>A repair robot on a tiny space station decides to grow a garden.</p>
+        </article>
+
+        <article class="book-card">
+          <span class="badge">Sci-Fi</span>
+          <h3>Orbit of Small Things</h3>
+          <p class="author">by Lena Okoro</p>
+          <p>A repair robot on a tiny space station decides to grow a garden.</p>
+        </article>
+      </section>
+
+
+      <!-- Part 2, practice 2: labelled checkbox, checked state styled with CSS only -->
+      <section class="settings" aria-labelledby="settings">
+        <h2 id="settings">Settings</h2>
+        <div class="check-row">
+          <input type="checkbox" id="favorites" class="toggle-input" />
+          <label for="favorites" class="toggle-label">Show favourites only</label>
+        </div>
+      </section>
+
+      <!-- Part 2, practice 3: keyboard test record -->
+      <section class="notes" aria-labelledby="notes">
+        <h2 id="notes">Keyboard test notes</h2>
+        <dl>
+          <dt>Issue</dt>
+          <dd>
+            When tabbing, there was no visible sign of which link or button had focus,
+            because the default outline had been removed with <code>outline: none</code>.
+          </dd>
+          <dt>Fix</dt>
+          <dd>
+            Removed <code>outline: none</code> and added a clear <code>:focus-visible</code>
+            outline to links, buttons and the checkbox. Also added a “Skip to main content”
+            link as the first focusable element.
+          </dd>
+        </dl>
+      </section>
+    </main>
+  </body>
+</html>

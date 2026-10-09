@@ -1,0 +1,111 @@
+/* ---------- Colour variables ---------- */
+:root {
+  --color-text: #1f2933;
+  --color-bg: #f5f3ef;
+  --color-surface: #fff;
+  --color-primary: #2d3a4a;
+  --color-primary-hover: #4a5d75;
+  --color-btn-hover-bg: #e3e8ee;
+  --color-accent: #e07a1f;
+  --color-focus: #ffd166;
+  --color-border: #c9bfae;
+  --color-muted: #6b7280;
+  --color-success: #2a9d8f;
+  --color-success-light: #d8f3ef;
+  --color-code-bg: #eee;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* width includes padding + border → easier to predict in DevTools */
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+.skip-link{ 
+  display: none;
+}
+.book-grid {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  margin: 20px 0;
+}
+.book-grid .book-card {
+  position: relative;
+  width: 25%;
+  background: var(--color-focus);
+  padding: 10px;
+  border: 1px solid var(--color-muted);
+}
+.book-card h3{
+  font-size: 17.2px;
+}
+.book-card .badge{
+  right: 2px;
+  top: 2px;
+  background: var(--color-success);
+  color: var(--color-code-bg);
+  position: absolute;
+  padding: 4px 10px;
+  border-radius: 5px;
+}
+header{
+  background: var(--color-primary-hover);
+}
+header::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.logo{
+  font-size: 44px;
+  color: var(--color-bg);
+  float: left;
+}
+nav{
+  float: right;
+}
+nav ul{
+  list-style: none;
+  display: flex;
+}
+nav ul li{
+  background-color: var(--color-bg);
+  color: var(--color-muted);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 30px;
+  transition: all;
+}
+nav ul li:hover{
+  background-color: var(--color-btn-hover-bg);
+}
+nav ul li a {
+  display: block;
+  background: transparent;
+}
+nav ul li a:focus{
+  background-color: var(--color-focus);
+}
+.logo-block{
+  
+}
